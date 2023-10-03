@@ -34,6 +34,7 @@ const toSlug = input => encodeURIComponent(
 );
 
 */
+// this is not technically a curry, but rather a partial application
 const curry = fn => (...args) => fn.bind(null, ...args);
 
 const map = curry((fn, arr) => arr.map(fn));
